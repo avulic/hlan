@@ -1,0 +1,135 @@
+﻿@model IEnumerable<IGrouping<string, HLAN.Models.Igrac>>
+@inject HLAN.Models.EF.HLANContext context
+
+@{
+    ViewData["Title"] = "Igraci";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var klubovi = context.Klubovi.ToList();
+}
+
+<h1>Igrači</h1>
+
+<p>
+    <a class="btn btn-primary" asp-action="Create">Create New</a>
+</p>
+<form asp-action="Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Pretaži po klubu: <select name="SearchString" value="@ViewData["CurrentFilter"]" asp-items="@(new SelectList(klubovi,"Naziv","Naziv"))"></select>
+            <input type="submit" value="Search" class="btn btn-default" /> |
+            <a asp-action="Index">Back to Full List</a>
+        </p>
+    </div>
+</form>
+
+@foreach (var elem in Model)
+{
+    <div class="row">
+    @foreach (var item in elem)
+    {
+        <div class="col-5">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">@item.Ime</h5>
+                    <h5 class="card-title">@item.Prezime</h5>
+                    <h5 class="card-title">@item.Klub</h5>
+                    <h5 class="card-title">@item.Pozicija</h5>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-secondary" });
+                    @Html.ActionLink("Details", "", new { }, new { @class = "btn btn-primary", @data_toggle = "collapse", href = "#collapseExample", role = "button", @aria_expanded = "false", @aria_controls = "collapseExample", onclick = "appendDetails('" + item.Id + "');" }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+                </div>
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                        <div class=@("player-details-" + item.Id)>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    </div>
+}
+
+
+
+<script>
+    function appendDetails(id) {
+        var link = '@Url.Action("Details", "Igraci", new { id = -1  })';
+        link = link.replace("-1", id);
+
+        $.ajax({
+            url: link,
+            type: "POST",
+            dataType: "JSON",
+            success: function (result) {
+                var item = JSON.parse(result.details);
+                var el = `
+                    <div class="d-flex flex-row">
+                        <div  class="flex-column">
+                            <div class="">
+                                Ime:
+                            </div>
+                            <div class="pr-2">
+                                ${item.Ime}
+                            </div>
+                            <div class="">
+                                Prezime:
+                            </div>
+                            <div class="pr-2">
+                                ${item.Prezime}
+                            </div>
+                            <div class="">
+                                OIB:
+                            </div>
+                            <div class="pr-2">
+                                ${item.OIB}
+                            </div>
+                            <div class="">
+                                Telefon:
+                            </div>
+                            <div class="pr-2">
+                                ${item.PhoneNumber}
+                            </div>
+                            <div class="">
+                                Email:
+                            </div>
+                            <div class="pr-2">
+                                ${item.Email}
+                            </div>
+                        </div>
+                        <div  class="flex-column" >
+                            <div class="">
+                                Platio čalanrinu:
+                            </div>
+                            <div class="pr-2">
+                                ${item.Platio_clanarinu}
+                            </div>
+                            <div class="">
+                                Broj:
+                            </div>
+                            <div class="pr-2">
+                                ${item.Broj}
+                            </div>
+                            <div class="">
+                                Pozicija:
+                            </div>
+                            <div class="pr-2">
+                                ${item.Pozicija}
+                            </div>
+                            <div class="">
+                                Klub:
+                            </div>
+                            <div class="pr-2">
+                                ${item.Klub.Naziv}
+                            </div>
+                        </div>
+                    </div>`;
+                var selector = ".player-details-" + item.Id;
+                $(selector).empty();
+                $(selector).append(el);   // Append new elements
+            }
+        });
+    }
+</script>

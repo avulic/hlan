@@ -1,0 +1,49 @@
+﻿@model IEnumerable<HLAN.Models.Entitie.Upisnica>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Upsinice</h1>
+
+<p>
+    <a class="btn btn-primary" asp-action="Create">Kreiraj novu</a>
+</p>
+<form asp-action="Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Pretaži po klubu: <select name="SearchString" value="@ViewData["CurrentFilter"]" asp-items="@(new SelectList(null,"Naziv","Naziv"))"></select>
+            <input type="submit" value="Search" class="btn btn-default" /> |
+            <a asp-action="Index">Back to Full List</a>
+        </p>
+    </div>
+</form>
+
+@foreach (var item in Model)
+{
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">@item.User.Ime</h5>
+            <h5 class="card-title">@item.User.Prezime</h5>
+            <h5 class="card-title">@item.User.Klub.Naziv</h5>
+            <h5 class="card-title">@item.User.Pozicija</h5>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-secondary" });
+            @Html.ActionLink("Details", "", new { }, new { @class = "btn btn-primary", @data_toggle = "collapse", href = "#collapseExample", role = "button", @aria_expanded = "false", @aria_controls = "collapseExample", onclick = "appendDetails('" + item.Id + "');" }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+            @if (User.IsInRole("Admin") || User.IsInRole("Trener"))
+            {
+                @Html.ActionLink("Prihvati", "Prihvati", new { id = item.Id }, new { @class = "btn btn-success" })
+                @Html.ActionLink("Odbi", "Odbi", new { id = item.Id }, new { @class = "btn btn-warning" })
+            }
+        </div>
+        <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+                <div class=@("player-details-" + item.Id)>
+
+                </div>
+            </div>
+        </div>
+    </div>
+}

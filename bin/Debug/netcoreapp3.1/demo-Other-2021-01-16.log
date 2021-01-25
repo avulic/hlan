@@ -1,0 +1,76 @@
+2021-01-16 16:04:58.2920||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 16:05:11.1565|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 16:16:53.5200||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 16:16:57.0925|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 16:31:43.2298||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 16:31:48.1623|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 16:54:26.4051||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 16:54:31.1914|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 17:00:06.6723||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 17:00:10.2984|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 17:01:48.0724||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 17:01:53.3021|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 17:06:10.0426||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 17:06:14.4020|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 17:07:00.2093||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 17:07:06.2748|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 17:16:31.5520||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 17:16:37.4948|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 17:21:37.2499||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 17:21:41.2569|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 17:25:57.3541||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 17:26:00.8644|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 17:28:01.4103||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 17:28:05.0899|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 17:28:48.8399||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 17:28:53.2660|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 17:29:30.9306||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 17:29:34.1058|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 17:30:11.8322||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 17:30:15.1989|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 17:30:51.3147||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 17:30:54.4568|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 17:33:02.9861||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 17:33:06.5029|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 17:34:15.2366||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 17:34:18.4167|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 17:35:28.5162||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 17:35:32.0080|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 17:40:28.2444||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 17:40:31.5739|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 17:43:14.9857||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 17:43:18.4416|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 17:48:01.5050||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 17:48:04.8156|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 17:49:49.3050||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 17:49:52.4077|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 17:53:19.2577||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 17:53:23.1783|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 17:55:54.0451||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 17:56:00.1855|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 17:56:39.2199||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 17:56:42.5636|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 17:57:14.5996||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 17:57:17.9669|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 17:57:38.6566||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 17:57:41.9844|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 18:11:44.1560||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 18:11:47.5952|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 18:13:23.8792||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 18:13:27.9407|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 18:26:11.5661||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 18:26:14.9438|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 18:29:38.3009||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 18:29:42.0386|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 18:30:41.8852||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 18:30:45.2397|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 18:32:57.6241||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 18:33:01.8822|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 18:33:47.8943||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 18:33:51.1522|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 18:34:08.1275||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 18:34:11.6512|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 18:34:56.0472||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 18:34:59.2704|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-16 18:35:47.7452||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-16 18:35:52.3175|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 

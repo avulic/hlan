@@ -1,0 +1,110 @@
+2021-01-15 02:49:04.6548||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-15 02:49:13.7819|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-15 02:52:18.9514||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-15 02:52:25.4092|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-15 02:54:10.3601||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-15 02:54:16.6058|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-15 02:55:01.7660||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-15 02:55:15.0843|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-15 02:58:08.9988||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-15 02:58:13.6488|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-15 02:59:27.6373||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-15 02:59:31.7251|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-15 03:03:37.3281||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-15 03:03:41.5924|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-15 03:07:27.3065||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-15 03:07:32.2383|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-15 03:13:01.0577||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-15 03:13:06.5223|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-15 03:14:44.6788||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-15 03:14:50.2302|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-15 03:17:29.6475||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-15 03:17:33.6425|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-15 03:20:50.1796||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-15 03:20:54.1724|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-15 03:21:33.2834||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-15 03:21:38.0650|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-15 03:22:45.5465||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-15 03:22:49.7533|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-15 03:24:13.6628||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-15 03:24:19.3988|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-15 03:24:55.1156||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-15 03:25:03.0075|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-15 03:26:40.8340||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-15 03:26:45.1455|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-15 03:28:01.8923||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-15 03:28:05.6734|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-15 03:30:30.9779||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-15 03:30:35.8103|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-15 03:32:52.3869||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-15 03:32:56.1645|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-15 03:35:36.2224||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-15 03:35:40.1239|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-15 03:36:45.6058||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-15 03:36:49.1574|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-15 03:39:22.6375||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-15 03:39:26.4186|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-15 03:41:05.7628||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-15 03:41:10.1855|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-15 03:42:17.7194||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-15 03:42:22.4456|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-15 03:43:05.1600||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-15 03:43:09.1232|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-15 03:46:33.2900||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-15 03:46:37.3279|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-15 03:49:41.6813||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-15 03:49:46.9075|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-15 03:51:20.9651||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-15 03:51:26.1494|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-15 03:52:45.8651||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-15 03:52:50.6434|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-15 03:53:30.6951||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-15 03:53:35.3858|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-15 03:54:59.6683||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-15 03:55:04.6218|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-15 16:05:05.9979||DEBUG|HLAN.Program|init main |url: |action: 
+2021-01-15 16:05:12.6357|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/|action: 
+2021-01-15 16:05:55.7408|3|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'Statistika\Igraci' was not found. Searched locations: /Views/Statistika/Statistika\Igraci.cshtml, /Views/Shared/Statistika\Igraci.cshtml, /Pages/Shared/Statistika\Igraci.cshtml |url: http://localhost/Statistika/Igraci|action: Igraci
+2021-01-15 16:05:55.7582|1|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.InvalidOperationException: The view 'Statistika\Igraci' was not found. The following locations were searched:
+/Views/Statistika/Statistika\Igraci.cshtml
+/Views/Shared/Statistika\Igraci.cshtml
+/Pages/Shared/Statistika\Igraci.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)|url: http://localhost/Statistika/Igraci|action: Igraci
+2021-01-15 16:06:00.2141|3|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'Statistika\Igraci' was not found. Searched locations: /Views/Statistika/Statistika\Igraci.cshtml, /Views/Shared/Statistika\Igraci.cshtml, /Pages/Shared/Statistika\Igraci.cshtml |url: http://localhost/Statistika/Klubovi|action: Klubovi
+2021-01-15 16:06:00.2246|1|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.InvalidOperationException: The view 'Statistika\Igraci' was not found. The following locations were searched:
+/Views/Statistika/Statistika\Igraci.cshtml
+/Views/Shared/Statistika\Igraci.cshtml
+/Pages/Shared/Statistika\Igraci.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)|url: http://localhost/Statistika/Klubovi|action: Klubovi
