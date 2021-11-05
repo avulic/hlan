@@ -1,0 +1,186 @@
+﻿@model IEnumerable<IGrouping<string, HLAN.Models.Igrac>>
+
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<HLAN.Models.Entitie.User> UserManager
+@inject HLAN.Models.EF.HLANContext context
+
+@{
+    ViewData["Title"] = "Igraci";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var klubovi = context.Klubovi.ToList();
+    var uloge = context.Roles.ToList();
+}
+
+<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+
+
+<h1>Igrači</h1>
+@if (User.IsInRole("Admin") || User.IsInRole("Trener"))
+{
+    <p>
+        <a class="btn btn-primary" asp-action="Create">Kreiraj novog</a>
+    </p>
+}
+<form asp-action="Index" method="get">
+    <div class="row">
+        <div class="form-actions no-color">
+            <p>
+                Pretaži po klubu: <select name="SearchString"
+                                          value="@ViewData["CurrentFilter"]"
+                                          asp-items="@(new SelectList(klubovi,"Naziv","Naziv",""))">
+                    <option selected="selected"></option>
+                </select>
+                <input type="submit" value="Search" class="btn btn-secondary" />
+            </p>
+        </div>
+        @if (User.IsInRole("Admin") || User.IsInRole("Trener"))
+        {
+            <div class="form-actions no-color">
+                <p>
+                    Pretaži po ulozi: <select name="Uloga"
+                                              value="@ViewData["Uloga"]"
+                                              asp-items="@(new SelectList(uloge, "NormalizedName", "Name"))">
+                                          <option selected="selected"></option>
+                    </select>
+                    <input type="submit" value="Search" class="btn btn-secondary" />
+                </p>
+            </div>
+        }
+        <a asp-action="Index">Back to Full List</a>
+    </div>
+
+
+</form>
+@if (Model != null)
+{
+    @foreach (var elem in Model)
+    {
+        <div class="row">
+            @foreach (var item in elem)
+            {
+
+                <div class="col-5">
+                    <div class="card m-1" style="width: 18rem; border:0">
+                        <img class="rounded-circle"
+                             style="align-self:center;"
+                             width="150" height="150"
+                             src="~/img/@item.Profilna"
+                             alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">@item.Ime @item.Prezime</h5>
+                            <h4 class="">@item.Klub</h4>
+                            @Html.ActionLink("Details", "", new { }, new
+                            {
+                                                                        @class = "btn btn-primary",
+                                                                        @data_toggle = "collapse",
+                                                                        href = "#collapseExample-" + item.Id,
+                                                                        role = "button",
+                                                                        @aria_expanded = "false",
+                                                                        @aria_controls = "collapseExample-" + item.Id,
+                                                                        onclick = "appendDetails('" + item.Id + "');"
+                            })
+                            @if (User.IsInRole("Admin") || User.IsInRole("Trener"))
+                            {
+                                @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-secondary" })
+                                @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+                            }
+                        </div>
+                        <div class="collapse" id=@("collapseExample-" + item.Id)>
+                            <div class="card card-body">
+                                <div id="chartContainer" style="height: 370px; width: 100%;" class=@("player-details-" + item.Id)>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+}
+
+
+
+
+<script>
+    function appendDetails(id) {
+        var link = '@Url.Action("Details", "Igraci", new { id = -1  })';
+        link = link.replace("-1", id);
+
+        $.ajax({
+            url: link,
+            type: "POST",
+            dataType: "JSON",
+            success: function (result) {
+                var item = JSON.parse(result.details);
+                var el = `
+                    <div class="d-flex flex-row">
+                        <div  class="flex-column">
+                            <div class="">
+                                Ime:
+                            </div>
+                            <div class="pr-2">
+                                ${item.Ime}
+                            </div>
+                            <div class="">
+                                Prezime:
+                            </div>
+                            <div class="pr-2">
+                                ${item.Prezime}
+                            </div>
+                            <div class="">
+                                OIB:
+                            </div>
+                            <div class="pr-2">
+                                ${item.OIB}
+                            </div>
+                            <div class="">
+                                Telefon:
+                            </div>
+                            <div class="pr-2">
+                                ${item.PhoneNumber}
+                            </div>
+                            <div class="">
+                                Email:
+                            </div>
+                            <div class="pr-2">
+                                ${item.Email}
+                            </div>
+                        </div>
+                        <div  class="flex-column" >
+                            <div class="">
+                                Platio čalanrinu:
+                            </div>
+                            <div class="pr-2">
+                                ${item.Platio_clanarinu}
+                            </div>
+                            <div class="">
+                                Broj:
+                            </div>
+                            <div class="pr-2">
+                                ${item.Broj}
+                            </div>
+                            <div class="">
+                                Pozicija:
+                            </div>
+                            <div class="pr-2">
+                                ${item.Pozicija}
+                            </div>
+                            <div class="">
+                                Klub:
+                            </div>
+                            <div class="pr-2">
+                                ${item.Klub != null ? item.Klub.Naziv : ""}
+                            </div>
+                        </div>
+                    </div>`;
+                var selector = ".player-details-" + item.Id;
+                $(selector).empty();
+                $(selector).append(el);   // Append new elements
+            }
+        });
+    }
+
+
+</script>

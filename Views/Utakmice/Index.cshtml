@@ -1,0 +1,86 @@
+﻿@model IEnumerable<HLAN.Models.Entitie.Utakmica>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+@if (User.IsInRole("Admin") || User.IsInRole("Trener"))
+{
+    <p>
+        <a asp-action="Create" class="btn btn-primary">Create New</a>
+    </p>
+}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Datum)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Domaci)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Gosti)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RezDomaci)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RezGosti)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sezona)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Kolo)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Datum)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Domaci.Naziv)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Gosti.Naziv)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RezDomaci)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RezGosti)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Sezona.Godina)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Kolo.Br)
+                    </td>
+
+                    <td>
+                        @if (User.IsInRole("Admin") || User.IsInRole("Trener"))
+                        {
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                        }
+                        @Html.ActionLink("Details", "Details", new { id = item.Id })
+                    </td>
+                    
+                </tr>
+            }
+        </tbody>
+    </table>

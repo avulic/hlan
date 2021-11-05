@@ -1,0 +1,99 @@
+﻿@model HLAN.Models.Entitie.User
+@inject HLAN.Models.EF.HLANContext context
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var klubovi = context.Klubovi.ToList();
+    var uloge = context.Roles.ToList();
+}
+
+<h1>Kreiraj korisnika</h1>
+
+<h4>Korisnik</h4>
+<hr />
+@ViewData["Error"]
+<div class="row">
+    <div class="col-md-4">
+        @using (Html.BeginForm("Create", "Igraci", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Ime" class="control-label"></label>
+                <input asp-for="Ime" class="form-control" />
+                <span asp-validation-for="Ime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Prezime" class="control-label"></label>
+                <input asp-for="Prezime" class="form-control" />
+                <span asp-validation-for="Prezime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserName" class="control-label"></label>
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Broj" class="control-label"></label>
+                <input asp-for="Broj" class="form-control" />
+                <span asp-validation-for="Broj" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pozicija" class="control-label"></label>
+                <input asp-for="Pozicija" class="form-control" />
+                <span asp-validation-for="Pozicija" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KlubId" class="control-label">Klub: </label>
+                <select asp-for="KlubId" asp-items="@(new SelectList(klubovi, "Id", "Naziv", "--Select--"))"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Uloge" class="control-label">Uloge: </label>
+                <select asp-for="Uloge" asp-items="@(new MultiSelectList(uloge, "NormalizedName", "Name"))"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneNumber" class="control-label"></label>
+                <input asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Platio_clanarinu" class="control-label"></label>
+                <input asp-for="Platio_clanarinu" class="form-control" />
+                <span asp-validation-for="Platio_clanarinu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Slika" class="control-label"></label>
+                <input asp-for="Slika" type="file" class="form-control" />
+                <span asp-validation-for="Slika" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adresa" class="control-label"></label>
+                <input asp-for="Adresa" class="form-control" />
+                <span asp-validation-for="Adresa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OIB" class="control-label"></label>
+                <input asp-for="OIB" class="form-control" />
+                <span asp-validation-for="OIB" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        }
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Nazad</a>
+</div>
+

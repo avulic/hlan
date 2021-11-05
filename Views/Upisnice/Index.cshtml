@@ -1,0 +1,41 @@
+﻿@model IEnumerable<IEnumerable<HLAN.Models.Entitie.Upisnica>>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Upsinice</h1>
+
+<p>
+    <a class="btn btn-primary" asp-action="Create">Kreiraj novu</a>
+</p>
+
+@if(Model != null){
+    @foreach (var row in Model)
+    {
+        <div class="row">
+            @foreach (var item in row)
+            {
+                <div class="card m-1" style="width: 18rem; border:0">
+                    <img class="rounded-circle" style="align-self:center;" height="150" width="150" src="~/img/@item.User.Profilna" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.User.Ime @item.User.Prezime</h5>
+                        <h5 class="card-title">@(item.User.Klub != null ? item.User.Klub.Naziv : "")</h5>
+                        <h4 class="primay">@(item.Potvrdena == true ? "Potvrđena" : "Nije potvrđena")</h4>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-secondary" })
+                        @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "btn btn-primary m-1" })
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+                        @if (User.IsInRole("Admin") || User.IsInRole("Trener"))
+                        {
+                            <div class="pull-right">
+                                @Html.ActionLink("Prihvati", "Prihvati", new { id = item.Id }, new { @class = "btn btn-success mr-1" })
+                                @Html.ActionLink("Odbi", "Odbij", new { id = item.Id }, new { @class = "btn btn-warning" })
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    }
+}

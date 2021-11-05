@@ -1,0 +1,72 @@
+﻿@model HLAN.Models.Entitie.Klub
+
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<HLAN.Models.Entitie.User> UserManager
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var user = await UserManager.GetUsersInRoleAsync("Trener");
+}
+
+<h1>Create</h1>
+
+<h4>Klub</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        @using (Html.BeginForm("Create", "Klubovi", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Skracenica" class="control-label"></label>
+                <input asp-for="Skracenica" class="form-control" />
+                <span asp-validation-for="Skracenica" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Naziv" class="control-label"></label>
+                <input asp-for="Naziv" class="form-control" />
+                <span asp-validation-for="Naziv" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vlasnik" class="control-label">Vlasnik: </label>
+                @Html.DropDownListFor(x => Model.VlasnikId, ViewBag.Igraci as IEnumerable<SelectListItem>, "-- Select --", null)
+            </div>
+            <div class="form-group">
+                <label>Trener: </label>
+                @Html.DropDownListFor(model => model.SelectedValues,
+                                    new MultiSelectList(user,"Id","PunoIme"),
+                                    new { @class = "chzn-select form-control", multiple = "multiple", @id = "trener" })
+            </div>
+            <div class="form-group">
+                <label asp-for="Slika" class="control-label"></label>
+                <input asp-for="Slika" class="form-control" />
+                <span asp-validation-for="Slika" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        }
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Nazad</a>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        $("#trener").change(function myfunction(item) {
+            appendTrener(item.data);
+        });
+    });
+
+    function appendTrener(item) {
+        var message = `<p> ${item} </p>`;
+
+        $("#trenerView").append(message);
+    }
+
+</script>

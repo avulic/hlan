@@ -1,0 +1,189 @@
+﻿@model IEnumerable<HLAN.Models.Entitie.Utakmica>
+
+@{
+    ViewData["Title"] = "HLAN";
+}
+
+
+<section class="hero-section set-bg">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="hs-item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="hs-text">
+                                <h1 class="display-4 text-light">Liga Australskog nogometa</h1>
+                            </div>
+                            <div class="latest-section">
+                                <div class="container">
+                                    <div class="ms-content">
+                                        <h4 class="text-light">Next</h4>
+                                        <div id="nextmaches">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<div class="container-fluid d-flex felx-row justify-content-around">
+
+    <section class="latest-section">
+        <div class="container">
+            <div class="ms-content">
+                <h4 class="text-dark">Recent Results</h4>
+                <div id="recentresult">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="col-lg-4">
+            <div class="section-title">
+                <h3>Rankings</h3>
+            </div>
+            <div class="points-table">
+                <table id="rankings" 
+                       class="table table-striped table-bordered dt-responsive nowrap" 
+                       width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th class="th-o">Br.</th>
+                            <th class="th-o">Naziv</th>
+                            <th class="th-o">P</th>
+                            <th class="th-o">W</th>
+                            <th class="th-o">L</th>
+                            <th class="th-o">N</th>
+                            <th class="th-o">PTS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+
+
+
+<script>
+    $(document).ready(function () {
+        $("#rankings").DataTable({
+            "ordering": false,
+            "searching": false,
+            "paging": false,
+            "info": false,
+            "processing": true,
+            "serverSide": true,
+            "filter": true,
+            "orderMulti": false,
+            "ajax": {
+                "url": "@Url.Action("Rankings", "Home")",
+                "type": "GET",
+                "datatype": "json",
+                "dataSrc": "rankings"
+            },
+            "columns": [
+                { data: 'br' },
+                { data: 'Naziv' },
+                { data: 'p' },
+                { data: 'w' },
+                { data: 'l' },
+                { data: 'n' },
+                { data: 'pts' }
+            ]
+        });
+    });
+
+    $(document).ready(function () {
+        $.ajax({
+            url: "@Url.Action("NextMaches", "Home")",
+            type: "GET",
+            dataType: "JSON",
+            success: function (result) {
+                $.each(JSON.parse(result.matches), function(item) {
+                    appendNextMatch(this);
+                });
+
+            }
+        });
+    });
+
+    $(document).ready(function () {
+        $.ajax({
+            url: "@Url.Action("LatestResults", "Home")",
+            type: "GET",
+            dataType: "JSON",
+            success: function (result) {
+                $.each(JSON.parse(result.matches), function(item) {
+                    appendMatchResult(this);
+                });
+
+            }
+        });
+    });
+
+    function appendNextMatch(item) {
+        var el = `
+                <div class= "container d-flex flex-row justify-content-center next-match-container">
+                    <div class="col text-center">
+                        <img class="rounded-circle circle" src="img/${item.Domaci.Logo}" alt="" style="max-height: 80px;">
+                        <h6 class="text-light ">${item.Domaci.Naziv}</h6>
+                    </div>
+
+                    <div class="col align-items-center">
+                        <div class="row  justify-content-center">
+                            <h4 class="text-light">VS</h4>
+                        </div>
+                        <div class="row  justify-content-center">
+                            <div class="mc-op text-light">${item.Datum}</div>
+                        </div>
+                    </div>
+
+                    <div class="col text-center">
+                        <img class="rounded-circle circle" src="img/${item.Gosti.Logo}" alt="" style="max-height: 80px;">
+                        <h6 class="text-light">${item.Gosti.Naziv}</h6>
+                    </div>
+                </div>`;
+        $("#nextmaches").append(el);   // Append new elements
+    }
+
+    function appendMatchResult(item) {
+        var el = `
+                <div class= "container text-dark p-3 b-1 d-flex flex-row justify-content-center next-match-container">
+                    <div class="col text-center">
+                        <img class="rounded-circle circle" src="img/${item.Domaci.Logo}" alt="" style="max-height: 80px;">
+                        <h6>${item.Domaci.Naziv}</h6>
+                    </div>
+
+                    <div class="col align-items-center">
+                        <div class="row  justify-content-center">
+                            <h4>${item.RezDomaci} : ${item.RezGosti}</h4>
+                        </div>
+                        <div class="row  justify-content-center">
+                            <div class="mc-op">${item.Datum}</div>
+                        </div>
+                    </div>
+
+                    <div class="col text-center">
+                        <img class="rounded-circle circle" src="img/${item.Gosti.Logo}" alt=""  style="max-height: 80px;">
+                        <h6>${item.Gosti.Naziv}</h6>
+                    </div>
+                </div>`;
+        $("#recentresult").append(el);   // Append new elements
+    }
+</script>

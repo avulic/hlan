@@ -1,0 +1,74 @@
+﻿@model HLAN.Models.Entitie.Utakmica
+
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<HLAN.Models.Entitie.User> SignInManager
+@inject UserManager<HLAN.Models.Entitie.User> UserManager
+@inject HLAN.Models.EF.HLANContext context
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var klubovi = context.Klubovi.ToList();
+    var sezone = context.Sezone.ToList();
+    var kola = context.Kola.ToList();
+}
+
+
+
+<h1>Create</h1>
+
+<h4>Utakmica</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <span class="text-danger">@ViewData["Error"]</span>
+        @using (Html.BeginForm("Create", "Utakmice", FormMethod.Post))
+        {
+            <div asp-validation-summary="ModelOnly" class="text-danger validation"></div>
+            <div class="form-group">
+                <label asp-for="Datum" class="control-label"></label>
+                @Html.TextBoxFor(model => model.Datum, new { @class = "form-control", type = "datetime-local" })
+                <span asp-validation-for="Datum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SezonaId" class="control-label">Sezona:</label>
+                <select asp-for="SezonaId" asp-items="@(new SelectList(sezone, "Id", "Godina", "--Select--"))" class="form-control"></select>
+                <span asp-validation-for="SezonaId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KoloId" class="control-label">Kolo:</label>
+                <select asp-for="KoloId" asp-items="@(new SelectList(kola, "Id", "Br", "--Select--"))" class="form-control"></select>
+                <span asp-validation-for="KoloId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <span asp-validation-for="DomaciId" class="control-label">Domaći: </span>
+                <select asp-for="DomaciId" asp-items="@(new SelectList(klubovi, "Id", "Naziv", "--Select--"))" class="form-control"></select>
+                <span asp-validation-for="DomaciId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RezDomaci" class="control-label"></label>
+                <input asp-for="RezDomaci" class="form-control" />
+                <span asp-validation-for="RezDomaci" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GostiId" class="control-label">Gosti:</label>
+                <select asp-for="GostiId" asp-items="@(new SelectList(klubovi, "Id", "Naziv", "--Select--"))" class="form-control"></select>
+                <span asp-validation-for="GostiId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RezGosti" class="control-label"></label>
+                <input asp-for="RezGosti" class="form-control" />
+                <span asp-validation-for="RezGosti" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        }
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

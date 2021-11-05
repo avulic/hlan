@@ -1,0 +1,73 @@
+﻿@model HLAN.Models.Entitie.Utakmica
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Utakmica</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Datum)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Datum)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KoloId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KoloId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SezonaId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SezonaId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DomaciId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DomaciId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GostiId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GostiId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RezDomaci)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RezDomaci)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RezGosti)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RezGosti)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Naziv)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Naziv)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>

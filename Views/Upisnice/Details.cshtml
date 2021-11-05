@@ -1,0 +1,85 @@
+﻿@model HLAN.Models.Entitie.Upisnica
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Upisnica</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.User.Ime)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.User.Ime)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.User.Prezime)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.User.Prezime)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.User.OIB)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.User.OIB)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.User.PhoneNumber)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.User.PhoneNumber)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.User.Adresa)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.User.Adresa)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.User.Slika)
+        </dt>
+        <dd class="col-sm-9">
+            <img src="~/img/@Model.User.Profilna" class="rounded-circle" height="40" width="40" asp-append-version="true" />
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.User.Email)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.User.Email)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.User.Klub.Naziv)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.User.Klub.Naziv)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Potvrdena)
+        </dt>
+        <dd class="col-sm-9">
+            @(Model.Potvrdena == true ? "Da" : "Ne")
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.PrihvaceniUvjeti)
+        </dt>
+        <dd class="col-sm-9">
+            @(Model.PrihvaceniUvjeti == true ? "Da" : "Ne")
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { id = Model?.Id }) |
+    <a asp-action="Index">Back to List</a>
+</div>

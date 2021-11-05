@@ -1,0 +1,54 @@
+﻿@model HLAN.Models.Igrac
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Igrac</h4>
+    <hr />
+    <dl class="row">
+        <dd class="col-sm-10">
+            <div class="form-group">
+                <img src="~/img/@Model.Profilna" class="rounded-circle" height="40" width="40" asp-append-version="true" />
+            </div>
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ime)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Prezime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Prezime)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Broj)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Broj)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Pozicija)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Pozicija)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Klub)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Klub)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { model = Model }) |
+    <a asp-action="Index">Back to List</a>
+</div>

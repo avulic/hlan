@@ -1,0 +1,88 @@
+﻿@model HLAN.Models.Entitie.Upisnica
+
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<HLAN.Models.Entitie.User> SignInManager
+@inject UserManager<HLAN.Models.Entitie.User> UserManager
+@inject HLAN.Models.EF.HLANContext context
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+
+    var user = await UserManager.GetUserAsync(User);
+    var klubovi = context.Klubovi.ToList();
+}
+
+<h1>Create</h1>
+
+<h4>Upisnica</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        @using (Html.BeginForm("Create", "Upisnice", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="User.Slika" class="control-label"></label>
+                <input asp-for="User.Slika" value="@user.Slika" class="form-control" />
+                <span asp-validation-for="User.Slika" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <img src="~/img/@user.Profilna" class="rounded-circle" height="40" width="40" asp-append-version="true" />
+            </div>
+            <div class="form-group">
+                <label asp-for="User.Ime" class="control-label"></label>
+                <input asp-for="User.Ime" value="@user.Ime" class="form-control" />
+                <span asp-validation-for="User.Ime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="User.Prezime" class="control-label"></label>
+                <input asp-for="User.Prezime" value="@user.Prezime" class="form-control" />
+                <span asp-validation-for="User.Prezime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="User.OIB" class="control-label"></label>
+                <input asp-for="User.OIB" value="@user.OIB" class="form-control" />
+                <span asp-validation-for="User.OIB" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="User.PhoneNumber" class="control-label"></label>
+                <input asp-for="User.PhoneNumber" value="@user.PhoneNumber" class="form-control" />
+                <span asp-validation-for="User.PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="User.Adresa" class="control-label"></label>
+                <input asp-for="User.Adresa" value="@user.Adresa" class="form-control" />
+                <span asp-validation-for="User.Adresa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="User.Email" class="control-label"></label>
+                <input asp-for="User.Email" value="@user.Email" class="form-control" />
+                <span asp-validation-for="User.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="User.Klub" class="control-label"></label>
+                <select asp-for="User.Klub.Id" asp-items="@(new SelectList(klubovi,"Id","Naziv"))"></select>
+                <span asp-validation-for="User.Klub.Id" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="PrihvaceniUvjeti" /> @Html.DisplayNameFor(model => model.PrihvaceniUvjeti)
+                </label>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Uvjeti</label>
+                <p>Tekst za uvjete učlanjenja</p>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        }
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
