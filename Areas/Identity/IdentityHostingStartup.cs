@@ -19,8 +19,8 @@ namespace HLAN.Areas.Identity
             builder.ConfigureServices((context, services) => {
 
                 services.AddDbContext<HLANContext>(options =>
-                    options.UseSqlServer(
-                        context.Configuration.GetConnectionString("DefaultConnection")));
+                    options.UseNpgsql(
+                        context.Configuration.GetConnectionString("PostgresConnectionHeroku")));
 
                 services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = true)
                         .AddRoles<IdentityRole>()
